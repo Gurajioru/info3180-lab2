@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+import datetime
 
 
 ###
@@ -28,6 +29,10 @@ def send_text_file(file_name):
     file_dot_text = file_name + '.txt'
     return app.send_static_file(file_dot_text)
 
+@app.route('/profile')
+def profile():
+    return render_template('profile.html', date=format_date_joined(now=datetime.datetime.now()))
+
 
 @app.after_request
 def add_header(response):
@@ -45,3 +50,9 @@ def add_header(response):
 def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
+
+
+def format_date_joined(now):
+   # 
+    return now.strftime("%B, %Y")
+

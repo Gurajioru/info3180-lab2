@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <div id = "pic_info">
+        <img src="{{url_for('static', filename='gackt.png')}}" />
+        <h2>Jelani Smith</h2>
+        <h4>@anon</h4>
+        <h4>Kingston, Jamaica</h4>
+        <h4 id = "joined">Joined {{date}}</h4>
+    </div>
+
+    <div id = "other">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elementum pellentesque blandit. Aliquam consequat eget purus et luctus. Nunc quis semper neque, ut iaculis nibh. Nullam tempor nibh ante, quis sollicitudin leo convallis sit amet. Vestibulum purus orci, cursus sit amet tincidunt eu, finibus at lacus. Proin a massa a neque ullamcorper posuere sed sit amet odio. Sed erat libero, vehicula in tempor vitae, venenatis id nisi. Cras ultricies, lacus sed suscipit tincidunt, arcu tellus fringilla dolor, at congue tellus diam at orci. Integer varius at urna ut tincidunt. Donec accumsan tempus enim a malesuada. Nulla rutrum commodo sem et fringilla.</p>
+        <div id = "follow">
+            <div class = "part">
+                <h3 class="head">7</h3>
+                <h4 class="info">Posts</h4>
+            </div>
+            <div class = "part">
+                <h3 class="head">100</h3>
+                <h4 class="info">Following</h4> 
+            </div>
+            <div class = "part">
+                <h3 class="head">250</h3>
+                <h4 class="info">Followers</h4>
+            </div>
+        </div>
+        <div id = "button">
+            <button type = "button">Follow</button>
+        </div>
+    </div>
+
+    
+{% endblock %}
